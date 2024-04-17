@@ -103,10 +103,10 @@ evc
     document.getElementById("daysOfMonth").innerHTML = "";
 
     days.forEach((dayData, i) => {
-      // generate empty cells before first day if month doesn't start from Monday
+      // generate empty cells before first day if month doesn't start from Sunday
       if (i === 0) {
-        // 0 = Monday ... 6 = Sunday 
-        // We have Monday as week's start day so dayInWeek is initiated with 0 representing Monday
+        // 0 = Sunday ... 6 = Sat 
+        // We have Sunday as week's start day so dayInWeek is initiated with 0 representing Sunday
         let dayInWeek = 0;
         while (days[0].day.getDay() !== dayInWeek && dayInWeek <= 6) {
           generateCell();
